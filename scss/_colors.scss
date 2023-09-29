@@ -1,10 +1,16 @@
+// Change these colors to fit the color scheme of your website. These variables should change the colors for the whole site.
 $primary-color: #33C3F0;
 $primary-color-hover: #1EAEDB;
 $secondary-color: #b4f033;
 $secondary-color-hover: #cbf76d;
 $accent-color: #F56D11;
 $accent-color-hover: #DE3C04;
+
+// Generally these stay the same, but you may change them if you prefer.
 $dark-color: #1F1F1F;
+$dark-color-hover: #404040;
+$light-color: white;
+$light-color-hover: #D1D1D1;
 
 .bg-color-primary {
   background-color: $primary-color;
@@ -18,8 +24,8 @@ $dark-color: #1F1F1F;
   background-color: $accent-color;
 }
 
-.bg-white {
-  background-color: white;
+.bg-light {
+  background-color: $light-color;
 }
 
 .bg-dark {
@@ -38,10 +44,10 @@ $dark-color: #1F1F1F;
   color: $accent-color;
 }
 
-.text-white {
-  color: white;
+.text-light {
+  color: $light-color;
 }
 
-.text-black {
-  color: black;
+.text-dark {
+  color: $dark-color;
 }

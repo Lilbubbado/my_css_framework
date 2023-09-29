@@ -8,7 +8,7 @@
 .bg-color-accent {
   background-color: #F56D11; }
 
-.bg-white {
+.bg-light {
   background-color: white; }
 
 .bg-dark {
@@ -23,36 +23,12 @@
 .text-accent-color {
   color: #F56D11; }
 
-.text-white {
+.text-light {
   color: white; }
 
-.text-black {
-  color: black; }
+.text-dark {
+  color: #1F1F1F; }
 
-/*
-* Skeleton V2.0.4
-* Copyright 2014, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 12/29/2014
-*/
-/* Table of contents
-––––––––––––––––––––––––––––––––––––––––––––––––––
-- Grid
-- Base Styles
-- Typography
-- Links
-- Buttons
-- Forms
-- Lists
-- Code
-- Tables
-- Spacing
-- Utilities
-- Clearing
-- Media Queries
-*/
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
@@ -298,6 +274,15 @@ input[type="button"] {
   cursor: pointer;
   box-sizing: border-box; }
 
+/* Smaller than phablet */
+@media (max-width: 549px) {
+  .button,
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    display: block;
+    width: 100%; } }
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
@@ -317,7 +302,7 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  color: #FFF;
+  color: white;
   background-color: #33C3F0;
   border-color: #33C3F0; }
 
@@ -331,7 +316,7 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  color: #FFF;
+  color: white;
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
 
@@ -340,7 +325,7 @@ button.button-secondary,
 input[type="submit"].button-secondary,
 input[type="reset"].button-secondary,
 input[type="button"].button-secondary {
-  color: #FFF;
+  color: white;
   background-color: #b4f033;
   border-color: #b4f033; }
 
@@ -354,7 +339,7 @@ button.button-secondary:focus,
 input[type="submit"].button-secondary:focus,
 input[type="reset"].button-secondary:focus,
 input[type="button"].button-secondary:focus {
-  color: #FFF;
+  color: white;
   background-color: #cbf76d;
   border-color: #cbf76d; }
 
@@ -363,7 +348,7 @@ button.button-accent,
 input[type="submit"].button-accent,
 input[type="reset"].button-accent,
 input[type="button"].button-accent {
-  color: #FFF;
+  color: white;
   background-color: #F56D11;
   border-color: #F56D11; }
 
@@ -377,9 +362,55 @@ button.button-accent:focus,
 input[type="submit"].button-accent:focus,
 input[type="reset"].button-accent:focus,
 input[type="button"].button-accent:focus {
-  color: #FFF;
+  color: white;
   background-color: #DE3C04;
   border-color: #DE3C04; }
+
+.button.button-dark,
+button.button-dark,
+input[type="submit"].button-dark,
+input[type="reset"].button-dark,
+input[type="button"].button-dark {
+  color: white;
+  background-color: #1F1F1F;
+  border-color: #1F1F1F; }
+
+.button.button-dark:hover,
+button.button-dark:hover,
+input[type="submit"].button-dark:hover,
+input[type="reset"].button-dark:hover,
+input[type="button"].button-dark:hover,
+.button.button-dark:focus,
+button.button-dark:focus,
+input[type="submit"].button-dark:focus,
+input[type="reset"].button-dark:focus,
+input[type="button"].button-dark:focus {
+  color: white;
+  background-color: #404040;
+  border-color: #404040; }
+
+.button.button-light,
+button.button-light,
+input[type="submit"].button-light,
+input[type="reset"].button-light,
+input[type="button"].button-light {
+  color: #1F1F1F;
+  background-color: white;
+  border-color: white; }
+
+.button.button-light:hover,
+button.button-light:hover,
+input[type="submit"].button-light:hover,
+input[type="reset"].button-light:hover,
+input[type="button"].button-light:hover,
+.button.button-light:focus,
+button.button-light:focus,
+input[type="submit"].button-light:focus,
+input[type="reset"].button-light:focus,
+input[type="button"].button-light:focus {
+  color: #1F1F1F;
+  background-color: #D1D1D1;
+  border-color: #D1D1D1; }
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -389,8 +420,7 @@ input[type="search"],
 input[type="text"],
 input[type="tel"],
 input[type="url"],
-input[type="password"],
-textarea,
+input[type="textarea"],
 select {
   height: 38px;
   padding: 6px 10px;
@@ -543,14 +573,6 @@ form {
 .u-pull-left {
   float: left; }
 
-/* Misc
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
-  border-width: 0;
-  border-top: 1px solid #E1E1E1; }
-
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Self Clearing Goodness */
@@ -574,5 +596,37 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Grid
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
 
 /*# sourceMappingURL=styles.css.map */
