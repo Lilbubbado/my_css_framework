@@ -1,0 +1,47 @@
+$primary-color: #33C3F0;
+$primary-color-hover: #1EAEDB;
+$secondary-color: #b4f033;
+$secondary-color-hover: #cbf76d;
+$accent-color: #F56D11;
+$accent-color-hover: #DE3C04;
+$dark-color: #1F1F1F;
+
+.bg-color-primary {
+  background-color: $primary-color;
+}
+
+.bg-color-secondary {
+  background-color: $secondary-color;
+}
+
+.bg-color-accent {
+  background-color: $accent-color;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-dark {
+  background-color: $dark-color;
+}
+
+.text-primary-color {
+  color: $primary-color;
+}
+
+.text-secondary-color {
+  color: $secondary-color;
+}
+
+.text-accent-color {
+  color: $accent-color;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black;
+}
