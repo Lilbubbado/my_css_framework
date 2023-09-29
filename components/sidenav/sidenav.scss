@@ -15,7 +15,7 @@
 }
 
 /* The navigation menu links */
-.sidenav a {
+.sidenav-btn {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -25,7 +25,7 @@
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+.sidenav-btn:hover {
   color: $light-color-hover;
 }
 
@@ -38,7 +38,7 @@
   margin-left: 50px;
 }
 
-#open-btn {
+#openButton {
   height: 50px;
   width: 50px;
   background-color: $dark-color;
@@ -46,27 +46,50 @@
   top: 75px;
   border-radius: 0 50% 50% 0;
   text-align: center;
+  cursor: pointer;
 }
 
-#open-btn:hover {
+#openButton:hover {
   transition: 0.3s;
   background-color: $dark-color-hover;
   height: 60px;
   width: 60px;
 }
 
-#open-btn i {
+#openButton i {
   padding: 35%;
 }
 
 @media (max-width: 750px) {
-  #open-btn {
+  #openButton {
     height: 60px;
     width: 60px;
     top: 25px;
   }
 }
 
+.dropdown-btn {
+  cursor: pointer;
+}
+
+.active {
+  background-color: $primary-color;
+  color: $dark-color;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: $dark-color-hover;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+  padding-top: 10px;
+}
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 // #main {
@@ -77,5 +100,5 @@
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav-btn {font-size: 18px;}
 }
