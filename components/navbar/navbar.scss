@@ -15,11 +15,25 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 1.7rem;
+  cursor: pointer;
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
-  background-color: $accent-color-hover;
+.topnav a:hover, .dropdown:hover .dropbtn  {
+  background-color: $secondary-color-hover;
+  color: $dark-color;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.show {
+  display: block !important;
+  position: fixed !important;
 }
 
 /* Add an active class to highlight the current page */
@@ -41,7 +55,9 @@
 
 /* When the screen is less than 550 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 550px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -61,4 +77,53 @@
     display: block;
     text-align: left;
   }
+}
+
+.topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative !important;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+
+
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 1.7rem;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
