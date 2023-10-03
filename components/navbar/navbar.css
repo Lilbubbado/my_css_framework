@@ -633,98 +633,60 @@ hr {
 - Clearing
 - Media Queries
 */
-/* The side navigation menu */
-.sidenav {
-  height: 100%;
-  /* 100% Full-height */
-  width: 0;
-  /* 0 width - change this with JavaScript */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Stay on top */
-  top: 0;
-  left: 0;
+/* Add a black background color to the top navigation */
+.topnav {
   background-color: #1F1F1F;
-  /* Black*/
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  padding-top: 60px;
-  /* Place content 60px from the top */
-  transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidenav */ }
+  overflow: hidden; }
 
-/* The navigation menu links */
-.sidenav-btn {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 2.5rem;
-  color: white;
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
   display: block;
-  transition: 0.3s; }
-
-/* When you mouse over the navigation links, change their color */
-.sidenav-btn:hover {
-  color: #D1D1D1; }
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 3.6rem;
-  margin-left: 50px; }
-
-#openButton {
-  height: 50px;
-  width: 50px;
-  background-color: #1F1F1F;
-  position: fixed;
-  top: 75px;
-  border-radius: 0 50% 50% 0;
+  color: white;
   text-align: center;
-  cursor: pointer; }
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.7rem; }
 
-#openButton:hover {
-  transition: 0.3s;
-  background-color: #404040;
-  height: 60px;
-  width: 60px; }
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #DE3C04; }
 
-#openButton i {
-  padding: 35%; }
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #33C3F0; }
 
-@media (max-width: 750px) {
-  #openButton {
-    height: 60px;
-    width: 60px;
-    top: 25px; } }
-.dropdown-btn {
-  cursor: pointer; }
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none; }
 
-.active {
-  background-color: #33C3F0;
-  color: #1F1F1F; }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; }
 
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
-  background-color: #404040;
-  padding-left: 8px; }
+/* When the screen is less than 550 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 550px) {
+  .topnav a:not(:first-child) {
+    display: none; }
 
-/* Optional: Style the caret down icon */
-.fa-caret-down {
-  float: right;
-  padding-right: 8px;
-  padding-top: 10px; }
+  .topnav a.icon {
+    float: right;
+    display: block; } }
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 550px) {
+  .topnav.responsive {
+    position: fixed; }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px; }
+  /*Change this position to relative if you do not want it sticky */
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
 
-  .sidenav-btn {
-    font-size: 1.8rem; } }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left; } }
 
-/*# sourceMappingURL=sidenav.css.map */
+/*# sourceMappingURL=navbar.css.map */

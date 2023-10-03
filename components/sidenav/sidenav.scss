@@ -1,4 +1,4 @@
-@import "../../scss/colors";
+@import "../../skeleton.scss";
 
 /* The side navigation menu */
 .sidenav {
@@ -18,7 +18,7 @@
 .sidenav-btn {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: $light-color;
   display: block;
   transition: 0.3s;
@@ -34,7 +34,7 @@
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
+  font-size: 3.6rem;
   margin-left: 50px;
 }
 
@@ -100,5 +100,5 @@
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
-  .sidenav-btn {font-size: 18px;}
+  .sidenav-btn {font-size: 1.8rem;}
 }
